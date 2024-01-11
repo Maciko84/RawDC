@@ -1,4 +1,4 @@
-# RawDC
+<img src="assets/banner.png"></img>
 > [!CAUTION]
 > You need to have python version 3.5 ( Or Higher ) and Git to Run & Clone this repository.
 ## Cloning
