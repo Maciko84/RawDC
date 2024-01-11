@@ -56,7 +56,7 @@ def ConvertToEmoji(value):
                     message.append(translator[line[i]])
                 else:
                     message.append(":blue_square:")
-        # Dodajemy :blue_square: na końcu każdej linii
+        # Add :blue_square: to end of every line
         message.extend([":blue_square:"] * (length - len(line)))
         message.append("\n")
     return ' '.join(message)
