@@ -6,6 +6,10 @@ to start working with `RawDC` format you need to clone this repository with foll
 ```
 git clone https://github.com/Maciko84/RawDC.git
 ```
+then go to source folder:
+```
+cd RawDC/src
+```
 next, you need to install `jsonc-parser` from pip:
 ```
 pip install jsonc-parser
@@ -65,7 +69,7 @@ Line
 Comment!
 */
 ```
-To run your code use following command in cloned repository directory:
+To run your code use following command in src folder:
 ```
 python . --input <path to jsonc file> -o <path to output txt file>
 ```
