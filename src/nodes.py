@@ -1,5 +1,7 @@
 from rawdcparser import Node
 from texttoemoji import ConvertToEmoji
+import random
+
 @Node("PLAIN_TEXT")
 def NODE_PLAIN_TEXT(content: list[str]):
     return '\n'.join(content) + '\n'
@@ -35,3 +37,18 @@ def NODE_TITLE(content: list[str]):
     for item in content:
         msg.append("# " + item + "\n")
     return ''.join(msg)
+
+@Node("CLAP_MESSAGE")
+def NODE_CLAP_MESSAGE(content: list[str]):
+    result = []
+    for line in content:
+        new_line = ''
+        for char in line:
+            if char == ' ':
+                new_line += ' :clap: '
+            elif random.random() < 0.1:  # 10% chance to change letter to :clap:
+                new_line += ' :clap: '
+            else:
+                new_line += char.upper() if random.choice([True, False]) else char.lower()
+        result.append(new_line)
+    return '\n'.join(result) + '\n'
